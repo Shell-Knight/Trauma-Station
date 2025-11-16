@@ -662,3 +662,9 @@ Entries:
         vulps.
   id: 74
   time: '2025-11-15T18:13:22.0000000+00:00'
+- author: ParadoxumOfficial
+  changes:
+    - type: Tweak
+      message: Updated Metal Textures.
+  id: 75
+  time: '2025-11-16T01:47:53.0000000+00:00'
