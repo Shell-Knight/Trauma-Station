@@ -22,6 +22,8 @@
     beepInterval: 2 # 2 beeps total (at 0 and 2)
   - type: Construction # Trauma
     graph: ExplosiveGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   name: flashbang
@@ -64,6 +66,8 @@
     - GrenadeFlashBang
   - type: Construction # Trauma
     graph: FlashbangGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   id: GrenadeFlashEffect
@@ -111,6 +115,8 @@
     price: 2000
   - type: Construction # Trauma
     graph: SyndicateMinibombGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   name: self destruct
@@ -138,7 +144,6 @@
         volume: 30
     initialBeepDelay: 0
     beepInterval: 16
-
 
 - type: entity
   parent: [ FragileGrenadeBase, GrenadeBase, BaseSyndicateContraband ]
@@ -219,6 +224,8 @@
     price: 1000
   - type: Construction # Trauma
     graph: SupermatterGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   name: whitehole grenade
@@ -281,6 +288,8 @@
     price: 1000
   - type: Construction # Truama
     graph: WhiteholeGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   name: the nuclear option
@@ -316,6 +325,8 @@
       path: /Audio/Effects/countdown.ogg
   - type: Construction #Trauma
     graph: NuclearOptionGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   name: modular grenade
@@ -389,6 +400,8 @@
     price: 666 # 2000 for 3, I love fractions
   - type: Construction #Trauma
     graph: EMPGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   name: holy hand grenade
@@ -420,6 +433,8 @@
     price: 10000
   - type: Construction # Trauma
     graph: HolyHandGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 # Non-explosive "dummy" grenades to use as a distraction.
 
@@ -451,6 +466,8 @@
       path: /Audio/Effects/countdown.ogg
   - type: Construction # Trauma
     graph: TrickGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   name: syndicate trickybomb
@@ -478,3 +495,5 @@
     price: 1000
   - type: Construction # Trauma
     graph: SyndicateTrickybombGraph
+    node: start
+    deconstructionTarget: null

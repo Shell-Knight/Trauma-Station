@@ -24,6 +24,8 @@
       path: /Audio/Items/smoke_grenade_prime.ogg
   - type: Construction # Trauma
     graph: SmokeGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   parent: [ BaseCivilianContraband, SmokeGrenade ]
@@ -45,6 +47,8 @@
         Quantity: 30
   - type: Construction # Trauma
     graph: CleanerGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   parent: SmokeGrenade
@@ -66,6 +70,8 @@
         Quantity: 20
   - type: Construction # Trauma
     graph: TearGasGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   parent: [ BaseEngineeringContraband, SmokeGrenade ]
@@ -87,6 +93,8 @@
     price: 350
   - type: Construction # Trauma
     graph: MetalFoamGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   parent: [ BaseEngineeringContraband, VolatileGrenadeBase, GrenadeBase ] # Prevent inheriting DeleteOnTrigger from SmokeGrenade
@@ -125,3 +133,5 @@
           False: { state: spent }
   - type: Construction # Trauma
     graph: AirGrenadeGraph
+    node: start
+    deconstructionTarget: null

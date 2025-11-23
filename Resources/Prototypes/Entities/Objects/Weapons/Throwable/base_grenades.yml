@@ -31,9 +31,6 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
       # </Trauma>
-  - type: Construction # Trauma - all grenades can be deconstructed for parts, inheritors have to specify a graph
-    node: start
-    deconstructionTarget: null
   - type: Appearance
   - type: AnimationPlayer
   - type: GenericVisualizer

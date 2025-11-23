@@ -89,6 +89,8 @@
     positional: true
   - type: Construction #Trauma
     graph: ClusterBangGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   parent: [VolatileGrenadeBase, ScatteringGrenadeBase, BaseSyndicateContraband]
@@ -121,6 +123,8 @@
     price: 2500
   - type: Construction # Trauma
     graph: ClusterGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   parent: [FragileGrenadeBase, ScatteringGrenadeBase, BaseSyndicateContraband]
@@ -209,3 +213,5 @@
     positional: true
   - type: Construction # Trauma
     graph: FoamGrenadeGraph
+    node: start
+    deconstructionTarget: null

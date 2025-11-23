@@ -303,9 +303,6 @@
   id: UplinkEnergyCrossbow
   name: uplink-energycrossbow-name
   description: uplink-energycrossbow-desc
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 30 # Trauma
   productEntity: WeaponEnergyCrossbow
   cost:
     Telecrystal: 50 # Trauma
@@ -2429,9 +2426,6 @@
 #  description: uplink-saw-advanced-desc
 #  icon: { sprite:  Objects/Specific/Medical/Surgery/saw.rsi, state: advanced}
 #  productEntity: SawAdvanced
-#  discountCategory: rareDiscounts
-#  discountDownTo:
-#    Telecrystal: 5 # Trauma
 #  cost:
 #    Telecrystal: 10 # Trauma
 #  categories:
@@ -2446,9 +2440,6 @@
   name: uplink-briefcase-gun-name
   description: uplink-briefcase-gun-desc
   productEntity: WeaponSubMachineGunBriefcase
-  discountCategory: veryRareDiscounts
-  discountDownTo:
-    Telecrystal: 50 # Trauma
   cost:
     Telecrystal: 75 # Trauma
   categories:

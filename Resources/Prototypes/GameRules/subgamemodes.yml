@@ -15,7 +15,6 @@
       maxPicks: 10
     maxDifficulty: 2.5
   - type: AntagSelection
-    selectionTime: IntraPlayerSpawn # Goob
     agentName: thief-round-end-agent-name
     selectionTime: IntraPlayerSpawn
     definitions:

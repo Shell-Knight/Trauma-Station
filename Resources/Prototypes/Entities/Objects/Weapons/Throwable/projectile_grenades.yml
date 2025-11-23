@@ -90,6 +90,8 @@
       path: /Audio/Effects/countdown.ogg
   - type: Construction # Trauma
     graph: StingerGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   parent: [FragileGrenadeBase, ProjectileGrenadeBase, BaseSyndicateContraband]
@@ -124,6 +126,8 @@
     price: 1500
   - type: Construction # Trauma
     graph: IncendiaryGrenadeGraph
+    node: start
+    deconstructionTarget: null
 
 - type: entity
   parent: [FragileGrenadeBase, ProjectileGrenadeBase, BaseSyndicateContraband]
@@ -158,3 +162,5 @@
     price: 1500
   - type: Construction # Trauma
     graph: ShrapnelGrenadeGraph
+    node: start
+    deconstructionTarget: null
