@@ -27,6 +27,7 @@
   id: LockerFillChiefMedicalOfficerTrauma
   table: !type:AllSelector
     children:
+    - id: ChemistryHotplateFlatPack
     - id: Multitool # for linking cloning machines
     - id: RapidSyringeGun
     - id: BoxSyringePax
