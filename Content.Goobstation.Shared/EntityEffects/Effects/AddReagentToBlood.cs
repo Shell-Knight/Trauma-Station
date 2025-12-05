@@ -22,7 +22,7 @@ public sealed partial class AddReagentToBlood : EntityEffectBase<AddReagentToBlo
     public override string? EntityEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
     {
         var proto = prototype.Index(Reagent);
-        return Loc.GetString("reagent-effect-guidebook-add-to-chemicals",
+        return Loc.GetString("entity-effect-guidebook-add-to-chemicals",
             ("chance", Probability),
             ("deltasign", MathF.Sign(Amount.Float())),
             ("reagent", proto.LocalizedName),
