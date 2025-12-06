@@ -46,7 +46,7 @@ public sealed partial class HolosignSystem
             if (_tag.HasTag(entity, ent.Comp.HolosignTag))
                 return null; // no stacking holosigns
 
-            if ((physics.CollisionLayer | BlockMask) != 0) // overlapping with something that blocks the field
+            if ((physics.CollisionLayer & BlockMask) != 0) // overlapping with something that blocks the field
                 return null;
         }
 
