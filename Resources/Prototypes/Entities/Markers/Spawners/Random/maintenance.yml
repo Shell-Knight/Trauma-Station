@@ -376,7 +376,8 @@
         tableId: SprayPaints
       - id: PowerCellMedium
       - id: PowerCellSmall
-      - id: Soap
+      - !type:NestedSelector
+        tableId: AllSoapsTable
       - id: Wirecutter
       - id: Screwdriver
       - id: Wrench
