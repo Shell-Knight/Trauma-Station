@@ -29,16 +29,14 @@ public sealed partial class HealthChangeEntityEffectSystem : EntityEffectSystem<
 
         damageSpec *= args.Scale;
 
-        // <Shitmed>
+        // <Goob>
         if (args.Effect.ScaleByTemperature is {} scaleTemp)
         {
             damageSpec *= TryComp<TemperatureComponent>(entity, out var temp)
                 ? scaleTemp.GetEfficiencyMultiplier(temp.CurrentTemperature, args.Scale, false)
                 : FixedPoint2.Zero;
         }
-        // </Shitmed>
 
-        // <Goob>
         // heretics can heal instead of being poisoned
         var ev = new ImmuneToPoisonDamageEvent();
         RaiseLocalEvent(entity, ref ev);
@@ -48,38 +46,16 @@ public sealed partial class HealthChangeEntityEffectSystem : EntityEffectSystem<
             if (damageSpec.GetTotal() == FixedPoint2.Zero)
                 return;
         }
+        // </Goob>
 
-        // Split damage into positive (actual damage) and negative (healing) so we can
-        // target damage to vital parts while keeping healing behaviour unchanged.
-        var positive = DamageSpecifier.GetPositive(damageSpec);
-        var negative = DamageSpecifier.GetNegative(damageSpec);
-        if (positive.AnyPositive())
-        {
-            _damageable.TryChangeDamage(
+        _damageable.TryChangeDamage(
                 entity.AsNullable(),
-                positive,
+                damageSpec,
                 args.Effect.IgnoreResistances,
                 interruptsDoAfters: false,
-                // Apply positive damage to vital parts
-                targetPart: TargetBodyPart.Vital,
-                ignoreBlockers: args.Effect.IgnoreBlockers,
-                splitDamage: args.Effect.SplitDamage);
-        }
-
-        // Apply healing (negative) with original targeting behavior
-        if (!negative.Empty)
-        {
-            _damageable.TryChangeDamage(
-                entity.AsNullable(),
-                negative,
-                args.Effect.IgnoreResistances,
-                interruptsDoAfters: false,
-                // Apply positive damage to vital parts
                 targetPart: args.Effect.UseTargeting ? args.Effect.TargetPart : null,
                 ignoreBlockers: args.Effect.IgnoreBlockers,
                 splitDamage: args.Effect.SplitDamage);
-        }
-        // </Goob>
     }
 }
 

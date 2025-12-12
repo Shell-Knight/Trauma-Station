@@ -611,7 +611,7 @@ namespace Content.Server.Ghost
                             _damageable.ChangeDamage(playerEntity.Value,
                                 damage,
                                 true,
-                                targetPart: _bodySystem.GetTargetBodyPart(root));
+                                targetPart: TargetBodyPart.All);
                         else
                             _damageable.ChangeDamage(playerEntity.Value, damage, true);
                         // Shitmed Change End
