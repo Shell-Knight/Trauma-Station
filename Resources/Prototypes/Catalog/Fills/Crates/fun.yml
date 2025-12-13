@@ -2,6 +2,9 @@
   id: AllPlushiesTable
   table: !type:GroupSelector
     children:
+    - !type:NestedSelector # Trauma
+      tableId: AllPlushiesTrauma
+      weight: 3 # keep synced with number of plushies in AllPlushiesTrauma
     - !type:NestedSelector
       tableId: AllLizardPlushieTable
     - id: PlushieNuke

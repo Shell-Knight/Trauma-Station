@@ -1,0 +1,8 @@
+# keep weight synced in AllFigurinesTable
+- type: entityTable
+  id: AllFigurinesTrauma
+  table: !type:GroupSelector
+    children:
+    - id: ToyFigurineDevil
+    - id: ToyFigurineBrigmedic
+    - id: ToyFigurineCosmicCultist
