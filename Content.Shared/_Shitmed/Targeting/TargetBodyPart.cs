@@ -45,5 +45,5 @@ public enum TargetBodyPart : ushort
 
     All = Head | Chest | Groin | LeftArm | LeftHand | RightArm | RightHand | LeftLeg | LeftFoot | RightLeg | RightFoot,
 
-    Vital = Head | Chest | Groin, // Goobstation
+    Vital = Head | Chest, // Goobstation
 }
