@@ -82,7 +82,7 @@ public sealed partial class WeldbotWeldOperator : HTNOperator
         }
         else
         {
-            _damageableSystem.TryChangeDamage(target, botComp.DamageAmount, true, false, damage);
+            _damageableSystem.ChangeDamage((target, damage), botComp.DamageAmount, true, false);
         }
 
         _audio.PlayPvs(botComp.WeldSound, target);

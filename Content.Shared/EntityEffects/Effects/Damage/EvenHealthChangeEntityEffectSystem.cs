@@ -1,3 +1,7 @@
+// <Trauma>
+using Content.Shared._Shitmed.EntityEffects.Effects;
+using Content.Shared.Temperature.Components;
+// </Trauma>
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Damage.Systems;
@@ -20,7 +24,17 @@ public sealed partial class EvenHealthChangeEntityEffectSystem : EntityEffectSys
     {
         foreach (var (group, amount) in args.Effect.Damage)
         {
-            _damageable.HealEvenly(entity.AsNullable(), amount * args.Scale, group);
+            // <Goob>
+            var healing = amount * args.Scale;
+            if (args.Effect.ScaleByTemperature is {} scaleTemp)
+            {
+                if (!TryComp<TemperatureComponent>(entity, out var temp))
+                    return; // condition stays the same so this is actually a good return in loop
+
+                healing *= scaleTemp.GetEfficiencyMultiplier(temp.CurrentTemperature, args.Scale, false);
+            }
+            _damageable.HealEvenly(entity.AsNullable(), healing, group);
+            // </Goob>
         }
     }
 }
@@ -39,6 +53,12 @@ public sealed partial class EvenHealthChange : EntityEffectBase<EvenHealthChange
     /// </summary>
     [DataField]
     public bool IgnoreResistances = true;
+
+    /// <summary>
+    /// Shitmed - How to scale the effect based on the temperature of the target entity.
+    /// </summary>
+    [DataField]
+    public TemperatureScaling? ScaleByTemperature;
 
     public override string EntityEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
     {
