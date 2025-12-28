@@ -555,10 +555,17 @@ public abstract partial class SharedBloodstreamSystem : EntitySystem // Shitmed 
         if (tempSolution.Volume > ent.Comp.BleedPuddleThreshold)
         {
             // <Goob> - Set the freshness when the spill is created instead of every time new blood is created
-            foreach (var dna in tempSolution
-                .SelectMany(r => r.Reagent.EnsureReagentData().OfType<DnaData>()))
+            var now = _timing.CurTime;
+            foreach (var quantity in tempSolution)
             {
-                dna.Freshness = _timing.CurTime;
+                if (quantity.Reagent.Data is not {} datas)
+                    continue;
+
+                foreach (var data in datas)
+                {
+                    if (data is DnaData dna)
+                        dna.Freshness = now;
+                }
             }
             // </Goob>
             _puddle.TrySpillAt(ent.Owner, tempSolution, out _, sound: false);

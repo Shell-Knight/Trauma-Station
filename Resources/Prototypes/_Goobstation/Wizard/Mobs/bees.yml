@@ -16,7 +16,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Water
-        quantity: 12.5
+        Quantity: 12.5
   - type: InjectableSolution
     solution: bloodstream
   - type: MeleeChemicalInjector
@@ -40,7 +40,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Licoxide
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -51,7 +51,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Amatoxin
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -62,7 +62,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Lexorin
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -73,7 +73,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: ChloralHydrate
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -84,7 +84,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: UnstableMutagen
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -95,7 +95,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: MindbreakerToxin
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -106,7 +106,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Pax
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -117,7 +117,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Lead
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -128,7 +128,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Lipolicide
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -139,7 +139,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Impedrezene
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -150,7 +150,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Razorium
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -161,7 +161,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: MuteToxin
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -172,7 +172,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: BuzzochloricBees
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -183,7 +183,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Laughter
-        quantity: 12.5
+        Quantity: 12.5
 
 - type: entity
   parent: MobAngryBeeWizard
@@ -194,4 +194,4 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Toxin
-        quantity: 12.5
+        Quantity: 12.5

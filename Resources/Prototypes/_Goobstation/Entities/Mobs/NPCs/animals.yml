@@ -62,7 +62,6 @@
       - ForcedSleep
       - TemporaryBlindness
       - Pacified
-      - StaminaModifier
   - type: FloatingVisuals
   - type: NpcFactionMember
     factions:
@@ -363,7 +362,7 @@
     baseWalkSpeed: 2.5
     baseSprintSpeed: 3.5
   - type: Stamina
-    critThreshold: 100
+    baseCritThreshold: 100
   - type: DamageStateVisuals
     states:
       Alive:
@@ -817,8 +816,6 @@
     attributes:
       proper: true
       gender: male
-  - type: Sprinter
-    staminaDrainRate: 2
   - type: TemperatureSpeed
     thresholds:
       293: 0.8

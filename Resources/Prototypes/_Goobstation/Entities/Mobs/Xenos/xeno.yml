@@ -8,8 +8,6 @@
   - type: CombatMode
   - type: InputMover
   - type: MobMover
-  - type: Sprinter
-    canSprint: false
   - type: HTN
     rootTask:
       task: XenoCompound
@@ -70,7 +68,7 @@
     speedModifierThresholds:
       25: 0.9
   - type: Stamina
-    critThreshold: 200
+    baseCritThreshold: 200
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:

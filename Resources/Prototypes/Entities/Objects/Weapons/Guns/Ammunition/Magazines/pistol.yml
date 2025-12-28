@@ -188,7 +188,6 @@
   parent: MagazinePistol
   id: MagazinePistolIncendiary
   name: pistol magazine (.35 auto incendiary)
-  parent: MagazinePistol
   description: 12-round single-stack magazine for pistols. Intended to hold self-igniting incendiary ammunition. # Goob - 10 -> 12
   components:
   - type: BallisticAmmoProvider

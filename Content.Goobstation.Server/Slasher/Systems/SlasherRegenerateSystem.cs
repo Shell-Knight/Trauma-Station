@@ -4,7 +4,7 @@ using Content.Goobstation.Shared.Slasher.Events;
 using Content.Shared.Cuffs;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
-using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Cuffs.Components;
 using Content.Shared.Actions;
@@ -74,7 +74,8 @@ public sealed class SlasherRegenerateSystem : EntitySystem
     /// <param name="comp">The SlasherRegenerateComponent</param>
     private void TryInjectReagent(EntityUid target, SlasherRegenerateComponent comp)
     {
-        var solution = new Solution(new ReagentId(comp.Reagent, null), FixedPoint2.New(comp.ReagentAmount));
+        var solution = new Solution();
+        solution.AddReagent(comp.Reagent, FixedPoint2.New(comp.ReagentAmount));
         _bloodstream.TryAddToBloodstream(target, solution);
     }
 }

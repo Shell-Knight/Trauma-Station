@@ -200,7 +200,6 @@
   description: uplink-hushpup-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Shotguns/hushpup.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateFilledHushpup
-  discountCategory: rareDiscounts
   cost:
     Telecrystal: 50 # Trauma - was 10, 5x
   categories:
@@ -1560,11 +1559,8 @@
   description: uplink-voice-mask-implanter-desc
   icon: { sprite: Interface/Actions/voice-mask.rsi, state: icon }
   productEntity: VoiceMaskImplanter
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 1
   cost:
-    Telecrystal: 2
+    Telecrystal: 10 # Trauma - was 2, 5x
   categories:
   - UplinkImplants
 

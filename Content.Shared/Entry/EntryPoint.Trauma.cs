@@ -19,7 +19,8 @@ public sealed partial class EntryPoint
         var loadedAssemblies = new HashSet<string>(_refMan.Assemblies.Count);
         foreach (var assembly in _refMan.Assemblies)
         {
-            loadedAssemblies.Add(assembly.GetName().Name);
+            if (assembly.GetName().Name is {} name)
+                loadedAssemblies.Add(name);
         }
 
         var missing = new List<string>();
